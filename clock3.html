@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = { hour: '2-digit', minute: '2-digit' };
+      document.getElementById('clock').innerHTML = now.toLocaleTimeString([], options);
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
